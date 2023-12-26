@@ -22,7 +22,7 @@ public class AnimatorViewGenerator : ISourceGenerator {
             var namespaceName = classData.classSymbol.ContainingNamespace?.Name ?? "global";
             var className = classData.classSymbol.Name;
             context.AddSource($"{namespaceName}_{className}_AnimatorParameterView.g.cs", classSource);
-            Utils.SaveSourceToPath($"E:/{namespaceName}_{className}_AnimatorParameterView.g.txt", classSource);
+            //Utils.SaveSourceToPath($"E:/{namespaceName}_{className}_AnimatorParameterView.g.txt", classSource);
         }
     }
     
