@@ -1,0 +1,11 @@
+{
+  "name": "com.sai.animatorparameterview",
+  "displayName": "AnimatorParameterView",
+  "author": { "name": "Sai" },
+  "version": "0.1.0",
+  "unity": "2021.3",
+  "description": "Source Generator for Unity Animator Parameters",
+  "keywords": [ "SourceGenerator", "Animator", "Plugin" ],
+  "license": "MIT",
+  "category": "Plugin"
+}
