@@ -9,6 +9,8 @@
 /src/AnimatorParameterView/[Bb]uilds/
 /src/AnimatorParameterView/[Ll]ogs/
 /src/AnimatorParameterView/[Uu]ser[Ss]ettings/
+/AnimatorParameterViewGenerator/bin/
+/AnimatorParameterViewGenerator/obj/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
