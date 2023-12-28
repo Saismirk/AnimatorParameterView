@@ -3,11 +3,10 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace AnimatorParameterViewGenerator; 
+namespace AnimatorParameterViewGenerator;
 
 public class SyntaxContextReceiver : ISyntaxContextReceiver {
     internal static ISyntaxContextReceiver Create() => new SyntaxContextReceiver();
-
     public List<(ISymbol classSymbol, ClassDeclarationSyntax classSyntax)> AnimatorViews { get; } = new();
 
     public void OnVisitSyntaxNode(GeneratorSyntaxContext context) {
@@ -16,12 +15,15 @@ public class SyntaxContextReceiver : ISyntaxContextReceiver {
         if (node is not ClassDeclarationSyntax classDeclaration || classDeclaration.AttributeLists.Count == 0) {
             return;
         }
-            
+
         var classSymbol = context.SemanticModel.GetDeclaredSymbol(classDeclaration);
 
-        if (classSymbol?
-                .GetAttributes()
-                .Any(ad => ad.AttributeClass != null && ad.AttributeClass.ToDisplayString() == "AnimatorParameterViewAttribute") == true) {
+        if (classSymbol?.GetAttributes()
+                       .Any(ad => ad.AttributeClass?.ToDisplayString()
+                                is "AnimatorParameterViewAttribute"
+                                or "AnimatorStateViewAttribute"
+                                or "AnimatorStateMachineViewAttribute")
+            == true) {
             AnimatorViews.Add((classSymbol, classDeclaration));
         }
     }
