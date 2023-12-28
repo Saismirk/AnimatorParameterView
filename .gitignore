@@ -72,3 +72,7 @@ src/AnimatorParameterView/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 # Temporary auto-generated Android Assets
 src/AnimatorParameterView/[Aa]ssets/[Ss]treamingAssets/aa.meta
 src/AnimatorParameterView/[Aa]ssets/[Ss]treamingAssets/aa/*
+.idea/.idea.UnitySourceGenerators/.idea/aws.xml
+.idea/.idea.UnitySourceGenerators/.idea/.name
+.idea/.idea.UnitySourceGenerators/.idea/indexLayout.xml
+.idea/.idea.UnitySourceGenerators/.idea/vcs.xml
