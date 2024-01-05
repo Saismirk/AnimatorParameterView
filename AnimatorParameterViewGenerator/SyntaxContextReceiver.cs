@@ -21,8 +21,7 @@ public class SyntaxContextReceiver : ISyntaxContextReceiver {
         if (classSymbol?.GetAttributes()
                        .Any(ad => ad.AttributeClass?.ToDisplayString()
                                 is "AnimatorParameterViewAttribute"
-                                or "AnimatorStateViewAttribute"
-                                or "AnimatorStateMachineViewAttribute")
+                                or "AnimatorStateViewAttribute")
             == true) {
             AnimatorViews.Add((classSymbol, classDeclaration));
         }
